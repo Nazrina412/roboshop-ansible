@@ -1,4 +1,4 @@
-- name: RoboShop Project playbook
+- name: RoboShop Project Playbook
   hosts: all
   become: true
   roles:
