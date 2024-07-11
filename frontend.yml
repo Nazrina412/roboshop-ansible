@@ -1,5 +1,5 @@
-- name: frontend
+- name: RoboShop
   hosts: all
   become: true
   roles:
-   - frontend
+   - {{ role_name }}
