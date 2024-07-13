@@ -20,13 +20,14 @@
     chdir: "{{ app_path }}"     # we have to go to location hence we use argsinclude from path##
 
 - name: Load Schema
-  ansible.builtin.include:
+  ansible.builtin.include_role:
     name: common
     tasks_from: schema
 
 - name: systemd setup
   ansible.builtin.include:
     name: common
-    tasks_from: schema
+    tasks_from: systemd
+
 
 
