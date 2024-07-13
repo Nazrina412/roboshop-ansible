@@ -1,6 +1,6 @@
 - name: Copy Mongodb repo file
   ansible.builtin.copy:
-    src: mongodb.repo
+    src: mongo.repo
     dest: /etc/yum.repos.d/mongo.repo
 
 - name: Install mongodb client
@@ -9,5 +9,5 @@
     state: latest
 
 - name: Load Master data
-  ansible.builtin.shell: mongosh --host mongo.dev.naifah.online </app/db/master-data.js
+  ansible.builtin.shell: mongosh --host mongodb.dev.naifah.online </app/db/master-data.js
 
