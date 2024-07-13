@@ -25,7 +25,7 @@
     tasks_from: schema
 
 - name: systemd setup
-  ansible.builtin.include:
+  ansible.builtin.include_role:
     name: common
     tasks_from: systemd
 
