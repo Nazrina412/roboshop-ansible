@@ -5,7 +5,7 @@
 
 - name: Install mongodb client
   ansible.builtin.dnf:
-    name: mongodb-monogsh
+    name: mongodb-org
     state: latest
 
 - name: Load Master data
