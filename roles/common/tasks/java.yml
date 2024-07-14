@@ -1,0 +1,23 @@
+- name: install maven and Java
+  ansible.builtin.dnf:
+    name: maven
+
+- name: setup app prerequisite
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: app-prereq
+
+- name: download dependencies
+  ansibel.builtin.shell: mvn clean package ; mv target/{{ component }}-1.0.jar {{component }}.jar
+  args:
+    chdir: "{{ app_path }}"
+
+
+- name: systemd setup
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: systemd
+
+- name: schema load
+
+
