@@ -1,5 +1,5 @@
 - name: Disbale redis default
-  ansible.builtin.shell: dnf module disbale redis -y
+  ansible.builtin.shell: dnf module disable redis -y
 
 - name: Enable redis 7
   ansible.builtin.shell: dnf module enable redis:7 -y
