@@ -1,5 +1,5 @@
 - name: install maven and Java
-  ansible.builtin.dnf:
+  ansible_builtin.dnf:
     name: maven
     state: latest
 
