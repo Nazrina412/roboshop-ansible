@@ -12,12 +12,13 @@
   args:
     chdir: "{{ app_path }}"
 
-
 - name: systemd setup
   ansible.builtin.include_role:
     name: common
     tasks_from: systemd
 
 - name: schema load
-
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: systemd
 
