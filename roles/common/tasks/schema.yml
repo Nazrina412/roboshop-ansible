@@ -22,7 +22,7 @@
       - name: Install mysql schema
         ansible.builtin.dnf:
           name: mysql
-        state: latest
+          state: latest
 
 
 
